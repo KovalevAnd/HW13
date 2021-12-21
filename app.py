@@ -16,7 +16,7 @@ def page_index():
 def page_tag():
     tag = request.args.get('tag')
     if not tag:
-        abort(400)
+        return 'abort(400)'
     posts = get_post_by_tag(read_json(POST_PATH), tag)
     return render_template('post_by_tag.html', tag=tag, posts=posts)
 
