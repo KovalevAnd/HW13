@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 
     <h1>Поиск постов</h1>
 
-    <form action="post_by_tag.html">
+    <form action="/tag">
         <p>По тегу</p>
         <select name="tag" >
             {% for tag in hash_tags %}
