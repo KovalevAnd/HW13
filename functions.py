@@ -23,3 +23,11 @@ def get_post_by_tag(raw_json, tag):
         if f'#{tag}' in i['content']:
             results.append(i)
     return results
+
+
+def add_post(post, filename):
+    data = read_json(filename)
+    data.append(post)
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4, sort_keys=True)
+
